@@ -22,3 +22,5 @@
 
 # Ignore installed bower dependencies
 /vendor/assets/bower_components
+/app/helpers
+/test
