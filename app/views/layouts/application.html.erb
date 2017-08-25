@@ -1,13 +1,15 @@
-<html >
+<html ng-app="dogs">
   <head>
     <title>DogsApp</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <base href="/" />    
   </head>
 
-  <body>
+  <body ng-cloak>
     <%= yield %>
   </body>
 </html>
