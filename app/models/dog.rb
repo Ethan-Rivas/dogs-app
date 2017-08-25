@@ -1,4 +1,4 @@
 class Dog < ApplicationRecord
-  has_one :race
-  has_many :vaccine
+  has_one :races
+  has_many :vaccines
 end
