@@ -1,3 +1,4 @@
 class Vaccine < ApplicationRecord
-  belongs_to :dogs
+  has_many :carts
+  has_many :dogs, through: :carts
 end

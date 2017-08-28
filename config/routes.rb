@@ -7,6 +7,9 @@ Rails.application.routes.draw do
       resources :dogs
       resources :races
       resources :vaccines
+      resources :carts
     end
   end
+
+  match '*path', to: 'frontend#index', via: :all
 end
