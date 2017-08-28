@@ -1,6 +1,4 @@
-class CartsController < ApplicationController
-<<<<<<< HEAD
-=======
+class Api::V1::CartsController < ApplicationController
   def index
     carts = Cart.all
 
@@ -35,5 +33,4 @@ class CartsController < ApplicationController
   def find_cart
     @cart = Cart.find(params[:id])
   end
->>>>>>> 359d47ef5d22181af4edd5aac224cab21a6f4d83
 end
