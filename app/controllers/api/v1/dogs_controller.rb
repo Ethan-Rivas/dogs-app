@@ -2,7 +2,7 @@ class Api::V1::DogsController < ApplicationController
   def index
     dogs = Dog.all
 
-    render json: dogs, include: :vaccines
+    render json: dogs, include: :carts
   end
 
   def show
@@ -27,7 +27,7 @@ class Api::V1::DogsController < ApplicationController
 
   private
   def dog_params
-    params.require(:dog).permit(:name, :age, :description, :sex, :size, :race_id, :vaccines_attributes => [:name, :description])
+    params.require(:dog).permit(:name, :age, :description, :sex, :size, :race_id)
   end
 
   def find_dog
