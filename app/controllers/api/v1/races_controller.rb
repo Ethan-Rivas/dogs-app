@@ -1,2 +1,2 @@
-class RacesController < ApplicationController
+class Api::V1::RacesController < ApplicationController
 end
