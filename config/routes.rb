@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       resources :vaccines
     end
   end
+
+  match '*path', to: 'frontend#index', via: :all
 end
