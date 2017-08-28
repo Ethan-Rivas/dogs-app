@@ -1,1 +1,12 @@
-<h1>Hola</h1>
+<div>
+    <div>Dogs List</div>
+
+    <div ng-repeat="dog in dogs">
+        <div class="dog-cart">
+            <div class="dog-image-cart"></div>
+            <h3 ng-bind="dog.name"></h3>
+            <p ng-bind="dog.age"></p>
+            <p ng-bind="dog.size"></p>
+        </div>
+    </div>
+</div>
