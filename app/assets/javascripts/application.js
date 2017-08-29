@@ -16,4 +16,5 @@
 //= require angular-route/angular-route.min
 //= require angular-route-segment/build/angular-route-segment
 //= require angular-app/application
+//= require bootstrap/dist/js/bootstrap
 //= require_tree .

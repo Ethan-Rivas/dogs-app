@@ -11,9 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap.min
- *= require bootstrap/dist/css/bootstrap-theme.min
  *= require font-awesome/css/font-awesome.min
  *= require style
+ *= require navbar
  *= require_tree .
  *= require_self
  */

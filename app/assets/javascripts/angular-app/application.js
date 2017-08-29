@@ -11,6 +11,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($ro
         templateUrl : "templates/dogs.html.hbs",
         controller : "DogsController"
     })
+    .when("/dogs/:id", {
+        templateUrl : "templates/dog.html.hbs",
+        controller : "DogsController"
+    })
 
     $locationProvider.html5Mode(true);    
 }]);
