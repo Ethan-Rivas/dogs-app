@@ -1,9 +1,9 @@
 var app = angular.module('dogs', ['ngRoute']);
 
-app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {    
+app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($routeProvider, $locationProvider, $httpProvider) {
     $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-    
-    $routeProvider        
+
+    $routeProvider
     .when("/", {
         templateUrl : "templates/index.html.hbs"
     })
@@ -16,17 +16,21 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function($ro
         controller : "DogsController"
     })
 
-    $locationProvider.html5Mode(true);    
+    $locationProvider.html5Mode(true);
 }]);
 
 // Dogs Controller
-app.controller('DogsController', function($scope, $http) {
+app.controller('DogsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
     $http.get('/api/v1/dogs.json').then(function(response) {
         $scope.dogs = response.data;
 
         console.log($scope.dogs);
     });
-});
+
+    $scope.dogRoute = '/api/v1/dogs/' + $routeParams.id;
+    
+    console.log($scope.dogRoute);
+}]);
 
 // Carts Controller
 app.controller('CartsController', function($scope, $http) {

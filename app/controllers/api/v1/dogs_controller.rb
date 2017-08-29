@@ -1,12 +1,15 @@
 class Api::V1::DogsController < ApplicationController
+
   def index
     dogs = Dog.all
 
-    render json: dogs, include: :carts
+    render json: dogs, :methods => [:carts, :image_url]
+
   end
 
   def show
-    render json: @dog
+    @dog = Dog.find(params[:id])
+    render json: @dog, :methods => [:carts, :image_url]
   end
 
   def create
@@ -19,6 +22,11 @@ class Api::V1::DogsController < ApplicationController
     end
   end
 
+  def update
+      @dog = Dog.find(params[:id])
+      @dog.update(dog_params)
+  end
+
   def destroy
     @dog.destroy
 
@@ -27,7 +35,7 @@ class Api::V1::DogsController < ApplicationController
 
   private
   def dog_params
-    params.require(:dog).permit(:name, :age, :description, :sex, :size, :race_id)
+    params.require(:dog).permit(:name, :age, :description, :sex, :size, :race_id, :image)
   end
 
   def find_dog
