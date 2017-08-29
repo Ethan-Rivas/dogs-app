@@ -1,0 +1,20 @@
+<form action="{{dogRoute}}" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_method" value="put">
+        <div class="dash-divisor row">
+            <h3 class="title-hero">
+                Subir Foto
+            </h3>
+
+            <div class="form-group">
+              <div col-md-12>
+                <div class="col-md-9">
+                  <label class="control-label">Subir Imagen</label>
+                    <input type="file" class="form-control" name="dog[image]" id="file" />
+                </div>
+              <div class="col-md-3">
+                <input class="btn send-button" type="submit" name="submit" value="SUBIR IMAGEN" />
+              </div>
+            </div>
+          </div>
+        </div>
+  </form>
