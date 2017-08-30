@@ -13,3 +13,7 @@
     width: 100%;
     border: 1px solid black;
 }
+ul.nav.navbar-nav .dropdown.open .dropdown-menu .row{
+  color: black;
+  background-color: white;
+}

@@ -7,31 +7,9 @@
 
     <div ng-repeat="dog in dogs">
         <div class="col-md-3 dog-cart">
-            <div class="dog-image-cart"></div>
-            <h3 ng-bind="dog.name"></h3>
-            <p>Edad: {{dog.age}}</p>
-            <p>Sexo: {{dog.sex}}</p>
-            <p>Size: {{dog.size}}</p>
-        </div>
-
-        <div class="col-md-3 dog-cart">
-            <div class="dog-image-cart"></div>
-            <h3 ng-bind="dog.name"></h3>
-            <p>Edad: {{dog.age}}</p>
-            <p>Sexo: {{dog.sex}}</p>
-            <p>Size: {{dog.size}}</p>
-        </div>
-
-         <div class="col-md-3 dog-cart">
-            <div class="dog-image-cart"></div>
-            <h3 ng-bind="dog.name"></h3>
-            <p>Edad: {{dog.age}}</p>
-            <p>Sexo: {{dog.sex}}</p>
-            <p>Size: {{dog.size}}</p>
-        </div>
-
-         <div class="col-md-3 dog-cart">
-            <div class="dog-image-cart"></div>
+            <div>
+              <img class="dog-image-cart" ng-src="{{dog.image_url}}" alt="">
+            </div>
             <h3 ng-bind="dog.name"></h3>
             <p>Edad: {{dog.age}}</p>
             <p>Sexo: {{dog.sex}}</p>
