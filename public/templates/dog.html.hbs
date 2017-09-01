@@ -1,20 +1,61 @@
-<form action="{{dogRoute}}" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="_method" value="put">
-        <div class="dash-divisor row">
-            <h3 class="title-hero">
-                Subir Foto
-            </h3>
 
-            <div class="form-group">
-              <div col-md-12>
-                <div class="col-md-9">
-                  <label class="control-label">Subir Imagen</label>
-                    <input type="file" class="form-control" name="dog[image]" id="file" />
-                </div>
-              <div class="col-md-3">
-                <input class="btn send-button" type="submit" name="submit" value="SUBIR IMAGEN" />
-              </div>
+
+          <div class="col-md-12">
+            <h3 class="title-hero">
+              Dogo #n
+             </h3>
+          </div>
+          <div class="col-md-12">
+             <div class="col-md-6">
+                <img class="dog-image-cart" ng-src="{{dog.image_url}}" alt="">
+             </div>
+             <div class="col-md-6">
+               Datos del perro X
+             </div>
+          </div>
+
+          <hr>
+
+          <form action="{{dogRoute}}" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_method" value="put"/>
+            <div class="col-md-6">
+              <label class="control-label">Subir Imagen</label>
+              <input type="file" class="form-control" name="dog[image]" id="file" />
             </div>
+            <div class="col-md-6">
+              <input class="btn send-button" type="submit" name="submit" value="SUBIR IMAGEN" />
+            </div>
+        </form>
+
+        <hr>
+
+        <div class="col-md-12">
+          <div class="col-md-6">
+            Vacunas
+          </div>
+
+
+          <div class="col-md-6">
+            Fotos del dogo
+            <form action="{{dogPRoute}}" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="post"/>
+                <div class="col-md-4">
+                  <label class="control-label">Subir Imagen</label>
+                  <input type="file" class="form-control" name="dog[image]" id="file" />
+                </div>
+                <div class="col-md-2">
+                    <input class="btn send-button" type="submit" name="submit" value="SUBIR IMAGEN" />
+                </div>
+            </form>
           </div>
         </div>
-  </form>
+
+        <hr>
+
+<div class="col-md-12">
+  <div class="col-md-12">
+    Historial dogo
+  </div>
+</div>
+
+<hr>
