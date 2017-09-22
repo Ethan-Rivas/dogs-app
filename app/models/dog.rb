@@ -4,7 +4,9 @@ class Dog < ApplicationRecord
 
   has_one :races
   has_many :carts
+  has_many :pictures
   has_many :vaccines, through: :carts
+  accepts_nested_attributes_for :pictures, allow_destroy: true
 
   def image_url
       image.url

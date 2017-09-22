@@ -28,8 +28,10 @@ app.controller('DogsController', ['$scope', '$http', '$routeParams', function($s
     });
 
     $scope.dogRoute = '/api/v1/dogs/' + $routeParams.id;
-    
+    $scope.dogPRoute = '/api/v1/dogs/' + $routeParams.id + '/pictures';
+
     console.log($scope.dogRoute);
+    console.log($scope.dogPRoute);
 }]);
 
 // Carts Controller

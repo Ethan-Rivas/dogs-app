@@ -17,3 +17,6 @@ ul.nav.navbar-nav .dropdown.open .dropdown-menu .row{
   color: black;
   background-color: white;
 }
+hr {
+  clear:both;
+}
